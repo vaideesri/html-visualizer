@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    background-color: #020f24;
+    text-align: center;
+  }
+  
+  .tag-buttons {
+    margin:2rem;
+    
+  }
+  
+  button {
+    padding: 1rem 2rem;
+    background-color: #5a6168;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .tag-display {
+    background-color: #cecece;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .tag-display *{
+    margin-top: 2rem;
+  }
+  
+  ul {
+    list-style-type: disc;
+  }
+  
+  input,
+  button {
+    margin: 5px 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  th, td {
+    border: 1px solid #2b2b2b;
+    padding: 2rem;
+    text-align: left;
+
+  }
+  td{
+    background-color: #b9b9b9;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+  .Button-Group{
+    color:white;
+  }
+
+
+
+
+  /* animation */
+  /* Define a class for the animation effect */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply the animation to displayed elements */
+
+
+
+/* Keyframes for the pop-up animation */
+@keyframes popUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Apply the pop-up animation to the active button when clicked */
+.tag-buttons button:active {
+  animation: popUp 0.5s ease;
+}
+
+/* Keyframes for the glowing animation */
+@keyframes glowing {
+  0% { box-shadow: 0 0 10px rgba(0, 0, 255, 0.7); }
+  50% { box-shadow: 0 0 20px rgba(0, 0, 255, 0.7); }
+  100% { box-shadow: 0 0 10px rgba(0, 0, 255, 0.7); }
+}
+
+/* Apply the glowing animation to the displayed buttons */
+.tag-buttons button:active,
+.tag-buttons button:focus,
+.tag-buttons button:hover,
+.tag-buttons button.active {
+  animation: glowing 1s infinite alternate;
+}
+
+
+/* Apply fade-in animation to all elements under .tag-display */
+.tag-display *, link {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+/* Apply fade-out animation to elements under .tag-display when removing */
+.tag-display.fade-out * {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+/* Define keyframe animations for fade-in and fade-out effects */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
